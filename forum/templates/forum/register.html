@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %} Register {% endblock title %}
+
+{% block body %}
+<body class="d-flex h-100 text-center text-white bg-dark" data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="">
+
+<div class="cover-container md-3 d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Forum</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link active" aria-current="page" href="/forum/">Home</a>
+      </nav>
+    </div>
+  </header>
+
+<div class="container" style="padding: 150px;">
+  <main class="px-3">
+    <form method="post" action="/forum/register">
+      {% csrf_token %}
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" id="username" name="username" aria-describedby="username1">
+    <div id="username1" class="form-text">i.e. Moiez_Javaid</div>
+  </div>
+
+       <div class="mb-3">
+    <label for="fname" class="form-label">First name</label>
+    <input type="text" class="form-control" id="fname" name="fname" aria-describedby="fname1">
+    <div id="fname1" class="form-text">Enter your first name</div>
+  </div>
+
+      <div class="mb-3">
+    <label for="lname" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="lname" name="lname" aria-describedby="lname1">
+    <div id="lname1" class="form-text">Enter your last name</div>
+  </div>
+
+
+        <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">i.e. code@gmail.com</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+  </main>
+</div>
+</div>
+
+
+
+
+
+<div data-flash-app-container="true" id="flash_player_app_root"></div></body>
+{% endblock body %}
